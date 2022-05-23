@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">GameCp4</string>
+    <string name="vs">Versus</string>
+    <string name="namapemain1">Pemain 1</string>
+    <string name="namapemain2">CPU</string>
+</resources>

@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var hasilSuit : ImageView
 
     // -1 kosong, 0 batu, 1 kertas, 2 gunting
-    var Terpilih1 = -1
+    var Terpilih1 = -1 // nama variable kalau bisa diawali dengan huruf kecil
     var Terpilih2 = -1
 
     val batu = 0
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        batu1 = findViewById<ImageView>(R.id.batu1)
+        batu1 = findViewById<ImageView>(R.id.batu1) // <ImageView> bisa di hapus, karna sudah di deklarasi di atasnya (lateinit var batu1 : ImageView)
         batu2 = findViewById<ImageView>(R.id.batu2)
         kertas1 = findViewById<ImageView>(R.id.kertas1)
         kertas2 = findViewById<ImageView>(R.id.kertas2)
@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         val refresh = findViewById<ImageView>(R.id.refresh)
 
         batu1.setOnClickListener {
-            Log.d(MainActivity::class.java.simpleName, "Batu 1 Terpilih")
+            Log.d(MainActivity::class.java.simpleName, "Batu 1 Terpilih") // plus 1 buat log, selalu biasakan log untuk mempermudah debug
             selectViewPertama(batu1, pilihan = 0)
         }
 
@@ -89,12 +89,12 @@ class MainActivity : AppCompatActivity() {
         view.setImageResource(R.drawable.ic_check)
         hasilSuit()
     }
-    private fun clearVIewPertama() {
+    private fun clearVIewPertama() { // typo, I di View harusnya kecil mas wkwk
         batu1.setImageResource(0)
         kertas1.setImageResource(0)
         gunting1.setImageResource(0)
     }
-    private fun clearVIewKedua() {
+    private fun clearVIewKedua() { // ada minor bug, saat clear view mungkin bisa di tambahin untuk clear variable Terpilih1 dan Terpilih2
         batu2.setImageResource(0)
         kertas2.setImageResource(0)
         gunting2.setImageResource(0)
